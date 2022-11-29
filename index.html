@@ -24,12 +24,13 @@
           <div class="home-searcher-input">
             <div class="search-input">
               <input type="text" placeholder="Try 'Weasley'" id="search" class="inputSearch">
-              <button>🔍</button>
+              <button id="searchButtonHome">🔍</button>
             </div>
           </div>
           <div class="home-more-button">
             <button class="dotsButton" id="dotsButton" >...</button>
             <button class="charactersButton inactive" id="charactersButton" >Characters</button>
+            <button class="charactersButton inactive" id="statusButton" >Dead or Alive?</button>
           </div>
         </section>
       </section>
@@ -45,11 +46,11 @@
           <div class="searcher-top-bar">
             <div class="searcher-top-bar-input">
               <input type="text" placeholder="Try 'Weasley'" id="searchTwo" class="inputSearch"/>
-              <button>🔍</button>
+              <button id="searchButtonNav">🔍</button>
             </div>
           </div>
         </section>
-        <section class="nav-searcher-bottom">
+        <section class="nav-searcher-bottom" id="navSearcherBottom">
           <div class="searcher-bottom-sort">
             <button>
               <img src="./assets/sort.svg" alt="sort button icon"/>
@@ -105,7 +106,7 @@
                   <div class="options-line last-line">
                     <div class="option">
                       <input type="radio" name="filter-characters" value="houseUndefined" id="houseUndefined" checked="true">
-                      <label for="houseUndefined">Undefined</label>
+                      <label for="houseUndefined">All</label>
                     </div>
                   </div>
                 </div>
@@ -122,10 +123,23 @@
       </section>
 
       <!--Characters details-->
-      <section class="characters-details">
-        <section class="details" id="details">
+      <section class="characters-details inactive">
+        <div class="close-character-details">
+          <button id="close-details">x</button>
+        </div>
+        <section class="details">
         </section>
       </section>
+
+      <!--Chart-->
+      <section class="chart-section">
+          <!--<section class="status-chart" id="statusChart"></section>-->
+          <canvas class="status-chart" id="statusChart"></canvas>
+      </section>
+
     </main>
-  <script src="main.js" type="module"></script></body>
+  <!--<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js" type="module"></script>
+  </body>
 </html>
